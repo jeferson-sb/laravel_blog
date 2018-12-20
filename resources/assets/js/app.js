@@ -19,6 +19,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 Vue.component('header-component', require('./components/Header.vue'));
 Vue.component('painel', require('./components/Painel.vue'));
 Vue.component('caixa', require('./components/Caixa.vue'));
+Vue.component('faq-component', require('./components/Faq.vue'));
+Vue.component('faq-categories', require('./components/FaqCategories.vue'));
 
 const app = new Vue({
     el: '#app'

@@ -17,6 +17,9 @@
                     </div>
                 </div>
             </painel>
+            {{-- <faq>
+              <p>Resposta</p>
+            </faq> --}}
         </div>
     </div>
 </div>

@@ -12,6 +12,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    @stack('scripts')
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -54,7 +55,20 @@
     </header-component>
         <main class="py-4">
             @yield('content')
+            @hasSection('navigation')
+                <div class="pull-right">
+                    @yield('navigation')
+                </div>
+            
+                <div class="clearfix"></div>
+            @endif
         </main>
+        <aside>
+            @yield('sidebar')
+        </aside>
+        <div class="container">
+            @yield('footer')
+        </div>
     </div>
 </body>
 </html>
