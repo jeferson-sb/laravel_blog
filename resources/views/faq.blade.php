@@ -32,3 +32,8 @@
   </div>
 
 @endsection
+
+@push('scripts')
+    {{-- this script will only render in this view --}}
+    <script src="js/app.js"></script>
+@endpush

@@ -1,6 +1,6 @@
 <template lang="html">
   <aside class="faq-aside">
-      <div class="faq-aside__option" v-model="isActive" :class="{ active: isActive }" @click="handleClick($event)">
+      <div class="faq-aside__option" @click="$root.$emit('show-faq', category_name)">
         <h5><a>{{ category_name }}</a></h5>
       </div>
   </aside>
@@ -12,18 +12,6 @@ export default {
     category_name: {
       type: String,
       required: true
-    }
-  },
-  data () {
-    return { 
-      isActive: false
-    }
-  },
-  methods: {
-    handleClick (event) {
-      this.$root.$emit('category', this.category_name)
-      this.isActive = !this.isActive
-      console.log(event)
     }
   }
 }
@@ -41,8 +29,9 @@ export default {
     padding: .5rem;
     border-radius: 3px
   }
-  .faq-aside__option.active{
+  .faq-aside__option:hover{
     background-color: salmon;
     color: #fff;
+    cursor: pointer;
   }
 </style>
